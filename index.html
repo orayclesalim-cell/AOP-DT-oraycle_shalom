@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV Chelvin Otello Salie</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="chelvin-body">
+
+  <!-- Latar Belakang Animasi Cuaca & Lingkungan -->
+  <div class="chelvin-latar" aria-hidden="true">
+    <svg class="chelvin-svg-filter" width="0" height="0" focusable="false">
+      <defs>
+        <filter id="chelvin-f-awan" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+          <feTurbulence type="fractalNoise" baseFrequency="0.012 0.017" numOctaves="4" seed="4" result="n"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="104" xChannelSelector="R" yChannelSelector="G" result="d"/>
+          <feGaussianBlur in="d" stdDeviation="2.4" result="s"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="2" seed="9" result="n2"/>
+          <feDiffuseLighting in="n2" surfaceScale="4" diffuseConstant="1.3" lighting-color="#fffdf8" result="l0">
+            <feDistantLight azimuth="315" elevation="58"/>
+          </feDiffuseLighting>
+          <feComponentTransfer in="l0" result="l">
+            <feFuncR type="linear" slope="0.3" intercept="0.72"/>
+            <feFuncG type="linear" slope="0.3" intercept="0.73"/>
+            <feFuncB type="linear" slope="0.3" intercept="0.76"/>
+          </feComponentTransfer>
+          <feBlend in="l" in2="s" mode="multiply" result="m"/>
+          <feComposite in="m" in2="s" operator="in"/>
+        </filter>
+        <filter id="chelvin-f-serat" x="-20%" y="-60%" width="140%" height="220%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.006 0.045" numOctaves="4" seed="2" result="n"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="46" xChannelSelector="R" yChannelSelector="G" result="d"/>
+          <feGaussianBlur in="d" stdDeviation="2.5"/>
+        </filter>
+        <filter id="chelvin-f-lembut" x="-20%" y="-60%" width="140%" height="220%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" seed="6" result="n"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="40" xChannelSelector="R" yChannelSelector="G" result="d"/>
+          <feGaussianBlur in="d" stdDeviation="4"/>
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="chelvin-langit-siang"></div>
+    <div class="chelvin-langit-senja"></div>
+    <div class="chelvin-langit-malam"></div>
+
+    <div class="chelvin-bintang-lapis">
+      <span class="chelvin-bintang chelvin-bintang-1"></span>
+      <span class="chelvin-bintang chelvin-bintang-2"></span>
+      <span class="chelvin-bintang chelvin-bintang-3"></span>
+      <span class="chelvin-bintang chelvin-bintang-4"></span>
+      <span class="chelvin-bintang chelvin-bintang-5"></span>
+      <span class="chelvin-bintang chelvin-bintang-6"></span>
+      <span class="chelvin-bintang chelvin-bintang-7"></span>
+      <span class="chelvin-bintang chelvin-bintang-8"></span>
+      <span class="chelvin-bintang chelvin-bintang-9"></span>
+      <span class="chelvin-bintang chelvin-bintang-10"></span>
+      <span class="chelvin-bintang chelvin-bintang-11"></span>
+      <span class="chelvin-bintang chelvin-bintang-12"></span>
+    </div>
+
+    <div class="chelvin-matahari-jalur"><div class="chelvin-matahari"></div></div>
+    <div class="chelvin-bulan-jalur"><div class="chelvin-bulan"></div></div>
+    <div class="chelvin-langit-lapis"></div>
+    <div class="chelvin-awan chelvin-cirrus"></div>
+    <div class="chelvin-awan chelvin-cumulus chelvin-cumulus-1"></div>
+    <div class="chelvin-awan chelvin-cumulus chelvin-cumulus-2"></div>
+    <div class="chelvin-awan chelvin-cumulus chelvin-cumulus-3"></div>
+    <div class="chelvin-kabut"></div>
+
+    <div class="chelvin-sel chelvin-sel-1">
+      <div class="chelvin-awan chelvin-awan-badan"></div>
+      <div class="chelvin-awan chelvin-awan-puncak"></div>
+      <div class="chelvin-awan chelvin-awan-anvil"></div>
+      <div class="chelvin-awan chelvin-mammatus"></div>
+      <div class="chelvin-awan chelvin-awan-dasar"></div>
+      <div class="chelvin-kilat"></div>
+      <div class="chelvin-petir"></div>
+      <div class="chelvin-updraft">
+        <i class="chelvin-updraft-alur chelvin-updraft-a"></i>
+        <i class="chelvin-updraft-alur chelvin-updraft-b"></i>
+        <i class="chelvin-updraft-alur chelvin-updraft-c"></i>
+      </div>
+      <div class="chelvin-hujan">
+        <i class="chelvin-hujan-jalur chelvin-hujan-a"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-b"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-c"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-d"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-e"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-f"></i>
+      </div>
+      <div class="chelvin-downdraft"></div>
+    </div>
+
+    <div class="chelvin-sel chelvin-sel-2">
+      <div class="chelvin-awan chelvin-awan-badan"></div>
+      <div class="chelvin-awan chelvin-awan-puncak"></div>
+      <div class="chelvin-awan chelvin-awan-anvil"></div>
+      <div class="chelvin-awan chelvin-mammatus"></div>
+      <div class="chelvin-awan chelvin-awan-dasar"></div>
+      <div class="chelvin-kilat"></div>
+      <div class="chelvin-petir"></div>
+      <div class="chelvin-updraft">
+        <i class="chelvin-updraft-alur chelvin-updraft-a"></i>
+        <i class="chelvin-updraft-alur chelvin-updraft-b"></i>
+        <i class="chelvin-updraft-alur chelvin-updraft-c"></i>
+      </div>
+      <div class="chelvin-hujan">
+        <i class="chelvin-hujan-jalur chelvin-hujan-a"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-b"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-c"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-d"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-e"></i>
+        <i class="chelvin-hujan-jalur chelvin-hujan-f"></i>
+      </div>
+      <div class="chelvin-downdraft"></div>
+    </div>
+
+    <div class="chelvin-petir-langsung chelvin-petir-1"></div>
+    <div class="chelvin-petir-langsung chelvin-petir-2"></div>
+    <div class="chelvin-petir-langsung chelvin-petir-3"></div>
+    <div class="chelvin-cahaya-kilat"></div>
+    <div class="chelvin-awan-redup"></div>
+
+    <div class="chelvin-tornado">
+      <span class="chelvin-pusaran chelvin-pusaran-1"></span>
+      <span class="chelvin-pusaran chelvin-pusaran-2"></span>
+      <span class="chelvin-pusaran chelvin-pusaran-3"></span>
+      <span class="chelvin-pusaran chelvin-pusaran-4"></span>
+      <span class="chelvin-pusaran chelvin-pusaran-5"></span>
+      <span class="chelvin-pusaran chelvin-pusaran-6"></span>
+      <span class="chelvin-pusaran-dasar"></span>
+      <span class="chelvin-puing-pusaran chelvin-puing-1"></span>
+      <span class="chelvin-puing-pusaran chelvin-puing-2"></span>
+      <span class="chelvin-puing-pusaran chelvin-puing-3"></span>
+      <span class="chelvin-puing-pusaran chelvin-puing-4"></span>
+    </div>
+
+    <div class="chelvin-daratan">
+      <div class="chelvin-bukit-jauh"></div>
+      <div class="chelvin-bukit-dekat"></div>
+      <div class="chelvin-stasiun-cuaca">
+        <span class="chelvin-tiang-cuaca"></span>
+        <span class="chelvin-lengan-cuaca"></span>
+        <span class="chelvin-anemometer"></span>
+        <span class="chelvin-kantong-angin"></span>
+        <span class="chelvin-suar-cuaca"></span>
+      </div>
+      <div class="chelvin-tanah"></div>
+      <div class="chelvin-trotoar"></div>
+      <div class="chelvin-jalan"><span class="chelvin-marka"></span></div>
+
+      <div class="chelvin-pohon chelvin-pohon-bulat chelvin-pohon-1"><span class="chelvin-pohon-batang"></span><span class="chelvin-pohon-tajuk"></span></div>
+      <div class="chelvin-pohon chelvin-pohon-cemara chelvin-pohon-2"><span class="chelvin-pohon-batang"></span><span class="chelvin-pohon-tajuk"></span></div>
+      <div class="chelvin-pohon chelvin-pohon-bulat chelvin-pohon-tumbang chelvin-pohon-3"><span class="chelvin-pohon-batang"></span><span class="chelvin-pohon-tajuk"></span><span class="chelvin-debu-tumbang"></span></div>
+      <div class="chelvin-pohon chelvin-pohon-cemara chelvin-pohon-tumbang chelvin-pohon-4"><span class="chelvin-pohon-batang"></span><span class="chelvin-pohon-tajuk"></span><span class="chelvin-debu-tumbang"></span></div>
+      <div class="chelvin-pohon chelvin-pohon-bulat chelvin-pohon-5"><span class="chelvin-pohon-batang"></span><span class="chelvin-pohon-tajuk"></span></div>
+
+      <div class="chelvin-semak chelvin-semak-1"></div>
+      <div class="chelvin-semak chelvin-semak-2"></div>
+      <div class="chelvin-semak chelvin-semak-3"></div>
+
+      <div class="chelvin-angin-badai">
+        <span class="chelvin-garis-angin chelvin-garis-angin-1"></span>
+        <span class="chelvin-garis-angin chelvin-garis-angin-2"></span>
+        <span class="chelvin-garis-angin chelvin-garis-angin-3"></span>
+        <span class="chelvin-garis-angin chelvin-garis-angin-4"></span>
+        <span class="chelvin-daun-terbang chelvin-daun-1"></span>
+        <span class="chelvin-daun-terbang chelvin-daun-2"></span>
+        <span class="chelvin-daun-terbang chelvin-daun-3"></span>
+        <span class="chelvin-daun-terbang chelvin-daun-4"></span>
+        <span class="chelvin-daun-terbang chelvin-daun-5"></span>
+        <span class="chelvin-partikel chelvin-genteng-1"></span>
+        <span class="chelvin-partikel chelvin-genteng-2"></span>
+        <span class="chelvin-partikel chelvin-papan-1"></span>
+        <span class="chelvin-partikel chelvin-papan-2"></span>
+        <span class="chelvin-partikel chelvin-rambu-terbang"></span>
+      </div>
+
+      <div class="chelvin-rumah chelvin-rumah-1">
+        <div class="chelvin-rumah-atap"></div>
+        <div class="chelvin-rumah-cerobong"><span class="chelvin-asap"></span><span class="chelvin-asap chelvin-asap-2"></span></div>
+        <div class="chelvin-rumah-dinding">
+          <span class="chelvin-jendela chelvin-jendela-kiri"></span>
+          <span class="chelvin-jendela chelvin-jendela-kanan"></span>
+          <span class="chelvin-rumah-pintu"></span>
+        </div>
+      </div>
+
+      <div class="chelvin-rumah chelvin-rumah-2">
+        <div class="chelvin-rumah-atap"></div>
+        <div class="chelvin-rumah-dinding">
+          <span class="chelvin-jendela chelvin-jendela-1"></span>
+          <span class="chelvin-jendela chelvin-jendela-2"></span>
+          <span class="chelvin-jendela chelvin-jendela-3"></span>
+          <span class="chelvin-jendela chelvin-jendela-4"></span>
+          <span class="chelvin-rumah-pintu"></span>
+        </div>
+      </div>
+
+      <div class="chelvin-rumah chelvin-rumah-3">
+        <div class="chelvin-rumah-atap"></div>
+        <div class="chelvin-rumah-dinding">
+          <span class="chelvin-jendela chelvin-jendela-kiri"></span>
+          <span class="chelvin-jendela chelvin-jendela-kanan"></span>
+          <span class="chelvin-rumah-pintu"></span>
+        </div>
+      </div>
+
+      <div class="chelvin-rumah chelvin-rumah-4">
+        <div class="chelvin-rumah-atap"></div>
+        <div class="chelvin-rumah-cerobong"><span class="chelvin-asap"></span></div>
+        <div class="chelvin-rumah-dinding">
+          <span class="chelvin-jendela chelvin-jendela-kiri"></span>
+          <span class="chelvin-jendela chelvin-jendela-kanan"></span>
+          <span class="chelvin-rumah-pintu"></span>
+        </div>
+      </div>
+
+      <div class="chelvin-lampu-jalan chelvin-lampu-1"><span class="chelvin-tiang-lampu"></span><span class="chelvin-kepala-lampu"></span><span class="chelvin-bohlam-lampu"></span><span class="chelvin-sorot-lampu"></span></div>
+      <div class="chelvin-lampu-jalan chelvin-lampu-2"><span class="chelvin-tiang-lampu"></span><span class="chelvin-kepala-lampu"></span><span class="chelvin-bohlam-lampu"></span><span class="chelvin-sorot-lampu"></span></div>
+      <div class="chelvin-lampu-jalan chelvin-lampu-3"><span class="chelvin-tiang-lampu"></span><span class="chelvin-kepala-lampu"></span><span class="chelvin-bohlam-lampu"></span><span class="chelvin-sorot-lampu"></span></div>
+      <div class="chelvin-lampu-jalan chelvin-lampu-4"><span class="chelvin-tiang-lampu"></span><span class="chelvin-kepala-lampu"></span><span class="chelvin-bohlam-lampu"></span><span class="chelvin-sorot-lampu"></span></div>
+
+      <div class="chelvin-daratan-gelap"></div>
+
+      <div class="chelvin-npc chelvin-npc-1">
+        <span class="chelvin-npc-tas"></span>
+        <span class="chelvin-npc-kaki chelvin-npc-kaki-kiri"></span>
+        <span class="chelvin-npc-kaki chelvin-npc-kaki-kanan"></span>
+        <span class="chelvin-npc-badan"></span>
+        <span class="chelvin-npc-kepala"></span>
+      </div>
+
+      <div class="chelvin-npc chelvin-npc-2">
+        <span class="chelvin-npc-tas"></span>
+        <span class="chelvin-npc-kaki chelvin-npc-kaki-kiri"></span>
+        <span class="chelvin-npc-kaki chelvin-npc-kaki-kanan"></span>
+        <span class="chelvin-npc-badan"></span>
+        <span class="chelvin-npc-kepala"></span>
+        <div class="chelvin-anjing">
+          <span class="chelvin-anjing-kaki chelvin-anjing-kaki-1"></span>
+          <span class="chelvin-anjing-kaki chelvin-anjing-kaki-2"></span>
+          <span class="chelvin-anjing-badan"></span>
+          <span class="chelvin-anjing-kepala"></span>
+        </div>
+      </div>
+
+      <div class="chelvin-npc chelvin-npc-3">
+        <span class="chelvin-npc-kaki chelvin-npc-kaki-kiri"></span>
+        <span class="chelvin-npc-kaki chelvin-npc-kaki-kanan"></span>
+        <span class="chelvin-npc-badan"></span>
+        <span class="chelvin-npc-kepala"></span>
+      </div>
+
+      <div class="chelvin-mobil chelvin-mobil-1">
+        <span class="chelvin-lampu-mobil"></span>
+        <span class="chelvin-lampu-belakang"></span>
+        <div class="chelvin-mobil-atap"><span class="chelvin-mobil-kaca"></span></div>
+        <div class="chelvin-mobil-bodi"></div>
+        <span class="chelvin-roda chelvin-roda-kiri"></span>
+        <span class="chelvin-roda chelvin-roda-kanan"></span>
+      </div>
+
+      <div class="chelvin-mobil chelvin-mobil-2">
+        <span class="chelvin-lampu-mobil"></span>
+        <span class="chelvin-lampu-belakang"></span>
+        <div class="chelvin-mobil-atap"><span class="chelvin-mobil-kaca"></span></div>
+        <div class="chelvin-mobil-bodi"></div>
+        <span class="chelvin-roda chelvin-roda-kiri"></span>
+        <span class="chelvin-roda chelvin-roda-kanan"></span>
+      </div>
+
+      <div class="chelvin-mobil chelvin-mobil-3">
+        <span class="chelvin-lampu-mobil"></span>
+        <span class="chelvin-lampu-belakang"></span>
+        <div class="chelvin-mobil-atap"><span class="chelvin-mobil-kaca"></span></div>
+        <div class="chelvin-mobil-bodi"></div>
+        <span class="chelvin-roda chelvin-roda-kiri"></span>
+        <span class="chelvin-roda chelvin-roda-kanan"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Konten Utama CV -->
+  <main class="chelvin-halaman">
+
+    <!-- Tombol Kembali ke Beranda (Dipindahkan dari <head> ke posisi yang benar) -->
+    <nav style="margin-bottom: 12px;">
+      <a class="foto-link" href="index.html" title="Kembali ke beranda">← Kembali ke Beranda</a>
+    </nav>
+
+    <header class="chelvin-kartu chelvin-header">
+      <a class="chelvin-foto-link" href="page1.html" title="Lihat CV teman kelompok">
+        <img class="chelvin-foto" src="https://cdn.phototourl.com/anon/2026-11-19-b9afee57-40f1-436b-a6c5-e112f53fb2fc.jpg" alt="Foto Chelvin Otello Salie memakai seragam sekolah">
+      </a>
+      <div class="chelvin-header-teks">
+        <h1 class="chelvin-nama">Chelvin Otello Salie</h1>
+        <p class="chelvin-lencana">Siswa Kelas 8.1, SMP Santa Laurensia</p>
+        <p class="chelvin-slogan">Suka meteorologi, bikin video, coding, dan membuat karya nyata.</p>
+      </div>
+    </header>
+
+    <div class="chelvin-susunan">
+      <div class="chelvin-kolom">
+        <section class="chelvin-kartu chelvin-kartu-biru">
+          <h2 class="chelvin-judul"><span class="chelvin-ikon chelvin-bulat">🪪</span>Biodata</h2>
+          <ul class="chelvin-daftar">
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-kotak">📍</span><span class="chelvin-isi">Lahir di: Kota Tangerang</span></li>
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-kotak">🏫</span><span class="chelvin-isi">Sekolah: SMP Santa Laurensia</span></li>
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-kotak">🎒</span><span class="chelvin-isi">Kelas: 8.1</span></li>
+          </ul>
+        </section>
+
+        <section class="chelvin-kartu chelvin-kartu-kuning">
+          <h2 class="chelvin-judul"><span class="chelvin-ikon chelvin-bulat">🎓</span>Pendidikan</h2>
+          <ul class="chelvin-daftar">
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">🏫</span><span class="chelvin-isi">SMP Santa Laurensia (2025 - sekarang)</span></li>
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">📘</span><span class="chelvin-isi">SD Santa Laurensia, Kelas 4 - 6 (2021 - 2024)</span></li>
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">📘</span><span class="chelvin-isi">SD Strada Santa Maria, Kelas 1 - 3 (2018 - 2021)</span></li>
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">🧸</span><span class="chelvin-isi">TK Strada Santa Maria (2018)</span></li>
+          </ul>
+        </section>
+
+        <section class="chelvin-kartu chelvin-kartu-hijau">
+          <h2 class="chelvin-judul"><span class="chelvin-ikon chelvin-bulat">🎨</span>Hobi</h2>
+          <ul class="chelvin-hobi">
+            <li class="chelvin-hobi-kotak"><span class="chelvin-hobi-ikon">🌦️</span>Meteorologi</li>
+            <li class="chelvin-hobi-kotak"><span class="chelvin-hobi-ikon">🎬</span>Bikin Video</li>
+            <li class="chelvin-hobi-kotak"><span class="chelvin-hobi-ikon">💻</span>Vibe Coding</li>
+            <li class="chelvin-hobi-kotak"><span class="chelvin-hobi-ikon">🛠️</span>Buat Karya</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="chelvin-kolom">
+        <section class="chelvin-kartu chelvin-kartu-merah">
+          <h2 class="chelvin-judul"><span class="chelvin-ikon chelvin-kotak">🎯</span>Cita-Cita</h2>
+          <ul class="chelvin-daftar">
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">🎬</span><span class="chelvin-isi">Menjadi YouTuber terkenal</span></li>
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">🌦️</span><span class="chelvin-isi">Menjadi ahli meteorologi</span></li>
+          </ul>
+        </section>
+
+        <section class="chelvin-kartu chelvin-kartu-biru">
+          <h2 class="chelvin-judul"><span class="chelvin-ikon chelvin-kotak">💡</span>Keahlian</h2>
+          <ul class="chelvin-daftar">
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">🌦️</span><span class="chelvin-isi">Memahami ilmu meteorologi</span></li>
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">🔧</span><span class="chelvin-isi">Membuat sesuatu di dunia nyata dengan alat dan bahan</span></li>
+          </ul>
+        </section>
+
+        <section class="chelvin-kartu chelvin-kartu-kuning">
+          <h2 class="chelvin-judul"><span class="chelvin-ikon chelvin-kotak">❤️</span>Favorit</h2>
+          <ul class="chelvin-daftar">
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">🍕</span><span class="chelvin-isi">Makanan: Pizza</span></li>
+            <li class="chelvin-baris"><span class="chelvin-mini chelvin-bulat">🥤</span><span class="chelvin-isi">Minuman: Es jeruk</span></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <section class="chelvin-kartu chelvin-kartu-hijau chelvin-lebar">
+      <h2 class="chelvin-judul"><span class="chelvin-ikon chelvin-kotak">🙋</span>Tentang Saya</h2>
+      <p class="chelvin-paragraf">Halo, saya Chelvin Otello Salie, siswa kelas 8.1 di SMP Santa Laurensia yang lahir di Kota Tangerang. Saya senang mempelajari cuaca dan meteorologi, membuat video, serta melakukan vibe coding.</p>
+      <p class="chelvin-paragraf">Selain proyek digital, saya juga suka membuat berbagai karya nyata menggunakan alat dan bahan. Cita-cita saya adalah menjadi YouTuber terkenal dan ahli meteorologi.</p>
+    </section>
+
+    <footer class="chelvin-kaki">Dibuat dengan HTML dan CSS</footer>
+  </main>
+
+  <!-- Efek Lapisan Depan -->
+  <div class="chelvin-efek-depan" aria-hidden="true">
+    <div class="chelvin-hujan-layar">
+      <div class="chelvin-hujan-deras-1"></div>
+      <div class="chelvin-hujan-deras-2"></div>
+      <span class="chelvin-tetes-kaca chelvin-tetes-1"></span>
+      <span class="chelvin-tetes-kaca chelvin-tetes-2"></span>
+      <span class="chelvin-tetes-kaca chelvin-tetes-3"></span>
+      <span class="chelvin-tetes-kaca chelvin-tetes-4"></span>
+      <span class="chelvin-tetes-kaca chelvin-tetes-5"></span>
+      <span class="chelvin-tetes-kaca chelvin-tetes-6"></span>
+    </div>
+    <div class="chelvin-kilat-layar"></div>
+  </div>
+
+  <!-- Tempat Kode JavaScript (Opsional jika ingin menambah interaksi) -->
+  <script>
+    // Contoh: Menampilkan pesan di console browser saat halaman selesai dimuat
+    console.log("Halaman CV Chelvin berhasil dimuat!");
+  </script>
+
+</body>
+</html>
